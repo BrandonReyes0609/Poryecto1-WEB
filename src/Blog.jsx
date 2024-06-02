@@ -7,7 +7,7 @@ const Blog = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/blog');
+                const res = await axios.get('https://nombre-de-tu-app.herokuapp.com/api/blog');
                 setPosts(res.data);
             } catch (err) {
                 console.error(err.message);
