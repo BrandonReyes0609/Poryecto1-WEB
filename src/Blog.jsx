@@ -7,7 +7,7 @@ const Blog = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get('https://proyecto1-web.herokuapp.com/api/blog');
+                const res = await axios.get('postgres://u4eksis8dnhmm3:pf3f0c104763c37ac94c02ddbdbed871e9e490199d63681bed928377611aeee74@cdeuajkr4sf66s.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/demlgl5n9857mp');
                 setPosts(res.data);
             } catch (err) {
                 console.error(err.message);
