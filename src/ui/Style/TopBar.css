@@ -1,0 +1,64 @@
+.topbar{
+	background-color:#313b45;
+	padding 10px;
+	text-align: center;
+	height: 20vh;
+	width: 100%;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.white {
+  color: white;
+}
+
+
+.login {
+	width:100%;
+	height:6vh;
+	align-items:center;
+	justify-content:center;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.title {
+	width:100%;
+	height:8vh;
+	text-align:center;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.crud {
+	width:100%;
+	height:6vh;
+	align-items:center;
+	justify-content:center;
+	display: flex;
+	flex-wrap: nowrap;
+	padding-left:20px;
+	padding-right:30px;
+}
+
+.button-log {
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	padding:5px;
+}
+
+.button-log:hover {
+	background-color:grey;
+}
+
+.button-crud {
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	margin-left:5%;
+}
+
+.button-crud:hover {
+	background-color:grey;
+}
