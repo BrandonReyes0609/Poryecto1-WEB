@@ -10,15 +10,21 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = resolve(__filename, '..');
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+    origin: 'https://fantastic-souffle-79cbbf.netlify.app', // Reemplaza con la URL de tu frontend en Netlify
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const pool = new Pool({
-    user: 'u4eksis8dnhmm3',
-    host: 'cdeuajkr4sf66s.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
-    database: 'demlgl5n9857mp',
-    password: 'pf3f0c104763c37ac94c02ddbdbed871e9e490199d63681bed928377611aeee74',
-    port: 5432,
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: process.env.PGPORT,
 });
 
 app.get('/api/blog', async (req, res) => {
@@ -39,7 +45,7 @@ app.get('*', (req, res) => {
     res.sendFile(resolve(__dirname, 'dist', 'index.html'));
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
