@@ -11,6 +11,7 @@ const __dirname = resolve(__filename, '..');
 
 const app = express();
 
+// Configurar CORS para permitir solicitudes desde Netlify
 const corsOptions = {
     origin: 'https://fantastic-souffle-79cbbf.netlify.app', // Reemplaza con la URL de tu frontend en Netlify
     optionsSuccessStatus: 200,
