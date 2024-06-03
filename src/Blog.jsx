@@ -7,7 +7,7 @@ const Blog = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get('https://nombre-de-tu-app.herokuapp.com/api/blog'); // Reemplaza con tu URL de Heroku
+                const res = await axios.get('https://proyecto1-web.herokuapp.com/api/blog'); // Reemplaza con tu URL de Heroku
                 setPosts(res.data);
             } catch (err) {
                 console.error('There was an error fetching the blogs!', err);
