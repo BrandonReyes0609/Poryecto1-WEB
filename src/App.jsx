@@ -1,30 +1,12 @@
-// src/App.js
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import Blog from './Blog';
 
 const App = () => {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:3001/blogs')
-      .then(response => {
-        setBlogs(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the blogs!', error);
-      });
-  }, []);
-
-  return (
-    <div>
-      <h1>Blog Posts</h1>
-      <ul>
-        {blogs.map(blog => (
-          <li key={blog.id}>{blog.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+    return (
+        <div>
+            <Blog />
+        </div>
+    );
 };
 
 export default App;
